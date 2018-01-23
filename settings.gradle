@@ -1,3 +1,5 @@
 rootProject.name = 'spring-hibernate'
 include 'ch4'
+include 'ch7'
+
 
