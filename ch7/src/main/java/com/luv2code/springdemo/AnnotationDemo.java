@@ -9,7 +9,7 @@ public class AnnotationDemo {
         // read Spring Config file
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Coach tennisCoach =  context.getBean("thatSallyCoache", TennisCoach.class);
+        Coach tennisCoach =  context.getBean("tennisCoach", TennisCoach.class);
 
         System.out.println(tennisCoach.getDeilyWorkOut());
 
