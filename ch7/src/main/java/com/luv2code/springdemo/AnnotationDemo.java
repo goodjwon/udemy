@@ -13,6 +13,8 @@ public class AnnotationDemo {
 
         System.out.println(tennisCoach.getDeilyWorkOut());
 
+        System.out.println(tennisCoach.getDeilyFortune());
+
         // close the context
         context.close();
 
