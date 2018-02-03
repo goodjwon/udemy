@@ -1,0 +1,27 @@
+package com.luv2code.springdemo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.servlet.http.HttpServletRequest;
+
+@Controller
+public class HelloWorldController {
+
+    @RequestMapping("/showForm")
+    public String showForm(){
+        return "helloworld-form";
+    }
+
+    @RequestMapping("/processForm")
+    public String processForm(HttpServletRequest request,
+        @RequestParam(value = "studentName", required = false, defaultValue = "World")String name, Model model) {
+
+            model.addAttribute("name", name);
+
+        return "helloworld";
+    }
+
+}
