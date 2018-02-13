@@ -19,13 +19,17 @@
         <br/><br/>
 
         Last name(*): <input type="text" th:field="*{lastName}" />
-        <p th:errors="*{lastName}" class="error" />
+        <span th:errors="*{lastName}" class="error" />
 
         <br/><br/>
 
         Free passes: <input type="text" th:field="*{freePasses}" />
-        <p th:errors="*{freePasses}" class="error" />
+        <span th:errors="*{freePasses}" class="error" />
 
+        <br/><br/>
+
+        Postal passes: <input type="text" th:field="*{postalCode}" />
+        <span th:errors="*{postalCode}" class="error" />
 
         <input type="submit" value="Submit"/>
 
