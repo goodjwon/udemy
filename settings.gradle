@@ -3,4 +3,5 @@ include 'ch4'
 include 'ch7'
 include 'ch8'
 include 'ch11-spring-mvc'
+include 'ch15-hibernate'
 
