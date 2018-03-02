@@ -4,4 +4,5 @@ include 'ch7'
 include 'ch8'
 include 'ch11-spring-mvc'
 include 'ch15-hibernate'
+include 'ch23-hb-01-one-to-one'
 
