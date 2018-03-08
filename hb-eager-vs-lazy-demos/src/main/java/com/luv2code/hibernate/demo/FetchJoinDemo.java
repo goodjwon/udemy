@@ -6,8 +6,9 @@ import com.luv2code.hibernate.demo.entity.InstructorDetail;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
-public class EagerLazyDemo {
+public class FetchJoinDemo {
 
     public static void main(String[] args) {
 
@@ -31,16 +32,18 @@ public class EagerLazyDemo {
 
             // get the instructor from db
             int theId = 1;
-            Instructor tempInstructor = session.get(Instructor.class, theId);
 
+            Query<Instructor> query =
+                    session.createQuery("select i from Instructor i "
+                            + "JOIN FETCH i.courses "
+                            + "where i.id = :theInstructorId ",
+                    Instructor.class);
+
+            query.setParameter("theInstructorId", theId);
+
+            Instructor tempInstructor = query.getSingleResult();
 
             System.out.println("luv2code: Instructor: "+tempInstructor);
-
-            //option 1
-
-
-            System.out.println("luv2code: Courses: "+tempInstructor.getCourses());
-
 
             //commit transaction
             session.getTransaction().commit();
@@ -50,10 +53,6 @@ public class EagerLazyDemo {
 
             System.out.println("\nSession closed!!! \n");
 
-            //since courses are lazy loaded ... this should fail.
-
-            //option 1: call getter method while session is open.
-            //option 2:
             System.out.println("luv2code: Courses: "+tempInstructor.getCourses());
 
             System.out.println("luv2code: Done !");
