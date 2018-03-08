@@ -19,6 +19,7 @@ public class TestJdbc {
         }
         catch (Exception exc) {
             exc.printStackTrace();
+            exc.printStackTrace();
         }
     }
 }
