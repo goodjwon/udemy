@@ -7,4 +7,5 @@ include 'ch15-hibernate'
 include 'ch23-hb-01-one-to-one'
 include 'hb-03-one-to-many'
 include 'hb-eager-vs-lazy-demos'
+include 'hb-04-one-to-many-uni'
 
