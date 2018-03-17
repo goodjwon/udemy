@@ -9,4 +9,6 @@ include 'hb-03-one-to-many'
 include 'hb-eager-vs-lazy-demos'
 include 'hb-04-one-to-many-uni'
 include 'hb-05-many-to-many'
+include 'spring-mvc-hd-01'
+include 'web-customer-tracker'
 
