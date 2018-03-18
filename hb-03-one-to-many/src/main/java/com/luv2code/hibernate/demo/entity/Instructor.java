@@ -98,14 +98,11 @@ public class Instructor {
         tempCourse.setInstructor(this);
     }
 
-    @Override
-    public String toString() {
-        return "Instructor{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", instructorDetail=" + instructorDetail +
-                '}';
+    public Instructor(String firstName, String lastName, String email, InstructorDetail instructorDetail, List<Course> courses) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.instructorDetail = instructorDetail;
+        this.courses = courses;
     }
 }
