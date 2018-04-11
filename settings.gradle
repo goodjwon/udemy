@@ -11,3 +11,5 @@ include 'hb-04-one-to-many-uni'
 include 'hb-05-many-to-many'
 include 'spring-mvc-hd-01'
 include 'web-customer-tracker'
+include 'aop-sample'
+
