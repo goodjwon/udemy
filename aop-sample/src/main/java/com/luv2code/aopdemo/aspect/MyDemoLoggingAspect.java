@@ -1,4 +1,4 @@
-package com.luv2code.aopdemo;
+package com.luv2code.aopdemo.aspect;
 
 
 import org.aspectj.lang.annotation.Aspect;

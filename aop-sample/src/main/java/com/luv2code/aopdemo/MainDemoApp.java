@@ -4,8 +4,6 @@ import com.luv2code.aopdemo.dao.AccountDAO;
 import com.luv2code.aopdemo.dao.MemberShipDAO;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.lang.reflect.Member;
-
 public class MainDemoApp {
 
     public static void main(String[] args) {
