@@ -21,7 +21,7 @@ subprojects {
         compile group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '5.2.13.Final'
         compile group: 'dom4j', name: 'dom4j', version: '1.6.1'
         compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
-        compile group: 'org.aspectj', name: 'aspectjrt', version: '1.9.0'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
         compile("org.springframework.boot:spring-boot-starter-web")
         compile("org.springframework.boot:spring-boot-starter-thymeleaf")
         compile("org.springframework.boot:spring-boot-starter-validation")
