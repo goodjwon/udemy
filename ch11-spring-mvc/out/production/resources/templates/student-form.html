@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/lib/bootstrap.min.css"/>
+</head>
+<body>
+<form action="#" th:action="@{processForm}" th:object="${student}" method="post">
+
+    First name: <input type="text" th:field="*{firstName}"/>
+
+    <br/><br/>
+
+    Last name: <input type="text" th:field="*{lastName}" />
+
+    <br/><br/>
+
+    Country name : <select name="country">
+        <option th:each="itemData :
+            ${student.getCountryOptions()}"
+                th:value="${itemData.getKey()}"
+                th:text="${itemData.getValue()}">
+        </option>
+    </select>
+
+    <input type="submit" value="Submit"/>
+
+    <!--부트스트랩 js, jquery 추가-->
+    <script src="/js/lib/jquery.min.js"></script>
+    <script src="/js/lib/bootstrap.min.js"></script>
+
+</form>
+</body>
+</html>
