@@ -18,15 +18,11 @@ public class MainDemoApp {
         MemberShipDAO theMemberShipDAO = context.getBean("memberShipDAO", MemberShipDAO.class);
 
         // call the business method
-        theAccountDAO.addAccount();
+        Account account = new Account();
+        theAccountDAO.addAccount(account, true);
 
-        theMemberShipDAO.addAccount();
+        theMemberShipDAO.addSellay();
 
-        System.out.println("\n let's call again");
-
-        theAccountDAO.addAccount();
-
-        // close the context
         context.close();
     }
 }
