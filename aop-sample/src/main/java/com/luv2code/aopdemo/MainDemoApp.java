@@ -20,8 +20,10 @@ public class MainDemoApp {
         // call the business method
         Account account = new Account();
         theAccountDAO.addAccount(account, true);
+        theAccountDAO.doWorks();
 
         theMemberShipDAO.addSellay();
+        theMemberShipDAO.goToSleep();
 
         context.close();
     }
