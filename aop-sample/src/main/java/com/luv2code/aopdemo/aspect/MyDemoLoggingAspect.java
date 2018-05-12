@@ -1,6 +1,7 @@
 package com.luv2code.aopdemo.aspect;
 
 
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -16,5 +17,11 @@ public class MyDemoLoggingAspect {
     @Before("forDapPackage()")
     public void beforeAddAccountAdivce() {
         System.out.println("\n====>>>> Executing @Before advice on addAccount()");
+    }
+
+
+    @After("forDapPackage()")
+    public void perFormApiUse() {
+        System.out.println("\n====>>>> Perform reuse API Call");
     }
 }
