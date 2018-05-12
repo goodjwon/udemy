@@ -21,11 +21,13 @@ Desktop.ini
 /captures
 /.idea
 *.iml
+*/out
 
 
 #gradle
 .gradle
 /build/
+gradle/
 
 # Ignore Gradle GUI config
 gradle-app.setting
