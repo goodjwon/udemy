@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyApiAnalyticsAspect {
 
-    @Before("forDapPackageNoGetterAndSetter()")
+    @Before("com.luv2code.aopdemo.aspect.LuvAopExpressions.forDapPackageNoGetterAndSetter()")
     public void perFormApiAnalytics() {
         System.out.println("\n====>>>> Perform reuse API Call");
     }

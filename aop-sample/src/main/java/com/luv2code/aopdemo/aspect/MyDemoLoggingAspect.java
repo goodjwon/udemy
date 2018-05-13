@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyDemoLoggingAspect {
 
-    @Before("forDapPackageNoGetterAndSetter()")
+    @Before("com.luv2code.aopdemo.aspect.LuvAopExpressions.forDapPackageNoGetterAndSetter()")
     public void beforeAddAccountAdivce() {
         System.out.println("\n====>>>> Executing @Before advice on addAccount()");
     }
