@@ -14,14 +14,37 @@ public class MyDemoLoggingAspect {
     @Pointcut("execution(public * com.luv2code.aopdemo.dao.*.*(..))")
     private void forDapPackage(){};
 
-    @Before("forDapPackage()")
+    @Pointcut("execution(public * com.luv2code.aopdemo.dao.*.get*(..))")
+    private void getter(){};
+
+    @Pointcut("execution(public * com.luv2code.aopdemo.dao.*.set*(..))")
+    private void setter(){};
+
+    @Pointcut("forDapPackage() && !(getter() || setter())")
+    private void forDapPackageNoGetterAndSetter(){};
+
+
+
+
+
+    @Before("forDapPackageNoGetterAndSetter()")
     public void beforeAddAccountAdivce() {
         System.out.println("\n====>>>> Executing @Before advice on addAccount()");
     }
 
-
-    @After("forDapPackage()")
+    @After("forDapPackageNoGetterAndSetter()")
     public void perFormApiUse() {
         System.out.println("\n====>>>> Perform reuse API Call");
     }
+
+//    @Before("getter()")
+//    public void beforeGettertAdivce() {
+//        System.out.println("\n====>>>> Executing @Before advice on getter()");
+//    }
+//
+//    @Before("setter()")
+//    public void beforeSetterAdivce() {
+//        System.out.println("\n====>>>> Executing @Before advice on setter()");
+//    }
+
 }

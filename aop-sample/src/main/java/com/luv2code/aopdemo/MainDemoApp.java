@@ -14,6 +14,11 @@ public class MainDemoApp {
 
         // get the bean from spring container
         AccountDAO theAccountDAO = context.getBean("accountDAO", AccountDAO.class);
+        theAccountDAO.setName("foobar");
+        theAccountDAO.setServiceCode("silver");
+
+        String name = theAccountDAO.getName();
+        String serviceCode = theAccountDAO.getServiceCode();
 
         MemberShipDAO theMemberShipDAO = context.getBean("memberShipDAO", MemberShipDAO.class);
 
