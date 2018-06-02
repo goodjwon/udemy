@@ -1,4 +1,4 @@
-rootProject.name = 'spring-hibernate'
+rootProject.name = 'udemy-study'
 include 'ch4'
 include 'ch7'
 include 'ch8'
@@ -12,4 +12,5 @@ include 'hb-05-many-to-many'
 include 'spring-mvc-hd-01'
 include 'web-customer-tracker'
 include 'aop-sample'
+include 'aop-read-joinpoint'
 
