@@ -13,4 +13,5 @@ include 'spring-mvc-hd-01'
 include 'web-customer-tracker'
 include 'aop-sample'
 include 'aop-read-joinpoint'
+include 'aop-z-after-returning'
 
